@@ -1,0 +1,9 @@
+#!/bin/bash
+# A script that pushes updates in the current directory to git
+
+commit_msg=$@
+
+git add .
+git commit -m $commit_msg
+git push
+echo "Your work has been added to git with the commit message" $commit_msg
