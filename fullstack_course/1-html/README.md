@@ -30,7 +30,7 @@ The `rel` attribute defines the relationship between the resource that’s being
 ```
 Character encoding is the method computers use to store characters as data and *UTF–8 (Unicode Transformation Format – 8-bit)* is the most widely used one. *UCS* stands for *Universal Character Set*. It’s the core character set defined by *Unicode and ISO/IEC 10646*, covering virtually all characters used in writing systems worldwide.
 
-Commenting allows you to leave messages without affecting the browser display. It also allows you to make code inactive. A comment in HTML starts with `<!--, contains any number of lines of text, and ends with -->`.
+Commenting allows you to leave messages without affecting the browser display. It also allows you to make code inactive. A comment in HTML starts with `<!--`, contains any number of lines of text, and ends with `-->`.
 
 The entire contents of the page are nested within an `html` element. The `html` element is the root element of an HTML page and wraps all content on the page. The `head` element is used to contain metadata about the document, such as its `title`, links to stylesheets, and scripts.
 Metadata is information about the page that isn't displayed directly on the page; all page content elements that should be rendered to the page go inside the `body` element. The  `main`  element is used to represent the main content of the body of an HTML document. Content inside the  `main`  element should be unique to the document and should not be repeated in other parts of the document.
