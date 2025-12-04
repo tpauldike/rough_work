@@ -55,8 +55,9 @@ In other words, HTML entities are special codes used to display characters that:
 They ensure your content renders safely and correctly across browsers. There are 3 types of HTML entities or character reference; named entities (which begins with an ampersand and ends with a semi-colon, with some letters or a word in between. E.g; `&copy;`), decimal entities (which starts with an ampersand ‘&’, followed by pound ‘#’, and the digits that refer to the particular character of interest. E.g; `&#169;`), and hexadecimal entities (composed of the ampersand, the pound symbol, the letter x, and the ASCII code of the character of interest. E.g; `&#x00A9;`).
 
 **The most important entities every developer should know are:**
+
 | Character | Named Entity | Numeric | Meaning |
-|--|--|--|
+|--|--|--|--|
 | < | `&lt;` | `&#60;` | Less-than |
 | > | `&gt;` | `&#62;` | Greater-than |
 | & | `&amp;` | `&#38;` | Ampersand |
