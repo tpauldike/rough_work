@@ -74,3 +74,39 @@ The `pre` (preformatted) helps your text appear the way it is (the spaces, inden
 }
 </pre>
 ```
+
+## Scripts in HTML
+The `script` element is used to embed executable code. While you can technically write all of your JavaScript code inside the script tags, it is considered best practice to link to an external JavaScript file instead. An example is shown below:
+```html
+<script src="path-to-javascript-file.js"></script>
+```
+<u>Separation of concern</u> is a design principle where you separate your programs into distinct sections and have each section address a separate concern.
+The `button` element is used to create clickable buttons on a webpage. Buttons are interactive elements that users can click to perform actions
+
+## Understanding How `HTML` Affects SEO
+```html
+<meta
+  name="description"
+  content="Discover expert tips and techniques for gardening in small spaces, choosing the right plants, and maintaining a thriving garden."
+/>
+```
+Although the site’s ranking on search engines is not influenced by the metadata, the meta tag allows for Search Engine Optimization by letting you provide an attractive or interesting description that appears as a preview in search results. It is a good practice to keep the description concise and precise enough. The goal is to entice users to want to click and engage. Another vital tool is the Open Graph protocol, a way of controlling how the preview appears when your web page is shared across social media platforms. When your content is shared on social media, well-crafted OG properties can enhance the appearance for your content in users' feeds. This can lead to higher click-through rates which could signal to search engines that your content is relevant and engaging. Below are examples of the use of OG in the meta tag for Search Engine Optimization:
+```html
+<meta content="About Topman" property="og:title" />					
+<meta content="Topman Paul-Dike" property="og:site_name" />			
+<meta
+  property="og:decription"
+  content="The exploits of a competent and experienced fullstack developer, who switched from being a Biologist"
+ />	
+<meta
+  content="https://github.com/tpauldike/about_me/topman.png" property="og:image"										
+/>													
+<meta property="og:type" content="website" />		
+<meta property="og:url" content="https://www.tpauldike.vercel.app" />
+```
+There are many more OG properties that you can set, like *description*, *audio*, *video* and *locale*. However, the open graph *url*, *image*, *type*, and *title* are the most important ones to include. Furthermore, the following can help social media render the image properly:
+```html
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+```
+It is recommended that the image is of high quality, 1200 x 630 pixels.
