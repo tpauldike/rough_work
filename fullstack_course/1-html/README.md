@@ -110,3 +110,38 @@ There are many more OG properties that you can set, like *description*, *audio*,
 <meta property="og:image:height" content="630">
 ```
 It is recommended that the image is of high quality, 1200 x 630 pixels.
+
+## HTML Audio and Video Elements
+###### Here is [my practical work](https://github.com/tpauldike/rough_work/blob/main/fullstack_course/1-html/video-and-audio.html) with HTML video and audio elements
+
+The `audio` element supports popular audio formats like mp3, wav, and ogg. The `video` element supports mp4, ogg, and webm formats. The audio has an src attribute that has the url of the audio file, but it will not be accessible by the user. Adding the controls attribute displays something like this: <audio controls></controls> 
+
+This enables the user to control (play, pause, mute, forward, rewind, increase the playback speed, and increase the volume of) the audio. The `audio` element also has other attributes such as; *autoplay (very useful for background music), loop (to play the song repeatedly to infinity), muted (to start the song muted for the user to unmute), preload  (auto, to preload the whole thing; metadata, to preload the only duration and size; none, to preload nothing), cross origin* and more.
+
+When it comes to audio file types, there are differences in which browsers support which type. To accommodate this, you can use source elements inside the audio element and the browser will select the first source that it understands. Here's an example of using multiple source elements for an audio element:
+
+```html
+<audio controls>							
+  <source src="audio.ogg" type="audio/ogg" />		
+  <source src="audio.wav" type="audio/wav" />  	
+  <source src="audio.mp3" type="audio/mpeg" />	
+  Your browser does not support the audio element.	
+</audio>
+```								
+The browser will first start with the ogg type, and if it can't play the audio, then it'll move down to the next type in the list.
+The video element shares the same attributes mentioned so far but has more, such as; playsinline, width, height, poster (to display an image while the video is preloading or before it plays). Below is an example:
+
+```html
+<video
+src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  loop
+  controls
+  muted
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="400"
+></video>
+```
+The code above will render this:
+
+<video src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4" loop controls muted poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217" width="400"></video>
+
