@@ -139,3 +139,28 @@ src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_s
   width="400"
 ></video>
 ```
+
+## Common Ways to Optimize Media Assets
+Size, format and compression are the 3 things to consider while using media such as images. The image shouldn’t be too large or too small; it’s unnecessary to use an image of size 1920x1080 when you want it rendered at 640x680.
+There are more optimized image formats than PNG and JPG. A compression algorithm can be run to have the image (not on JPGs, to avoid reduced quality) locally compressed for optimization, so that the user doesn’t download unnecessary data while browsing your web page.
+
+Images are considered as intellectual property and are therefore copyrighted, using them requires either obtaining written permission from the copyright holder, purchasing a license from the copyright holder, or incorporating the image in a way that falls under fair use (which is a bit dicey).
+Images licensed specifically under the Creative Commons 0 license are considered public domain, they have no copyright and are free to use, such as is the case of Pixabay and Unsplash. Be mindful of the license and copyright terms before you use an image on your website. The default copyright that the creator or original owner has is the All Rights Reserved, except otherwise specified.
+Copyright is the right that the owner has, while license is how much of that right he chooses to share with you.
+
+Common image formats like PNG and JPG are classified as raster formats, because they’re pixel-based; SVG stands for a scalable vector graphic, which can be scaled to any size without impacting the quality, unlike the raster formats. Also, SVG can be coded directly in your raw HTML, using the svg element, as seen in the example below:
+```html
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="45" stroke="black" stroke-width="4" fill="yellow" />
+  <circle cx="35" cy="40" r="5" fill="black" />
+  <circle cx="65" cy="40" r="5" fill="black" />
+  <path d="M35 65 Q50 80 65 65" stroke="black" stroke-width="4" fill="transparent" />
+</svg>
+```
+**In the above example:**
+- The `svg` element is the container for the whole drawing. It sets up the space where all the shapes appear. Everything you want to draw with SVG, such as circles, lines, or paths, goes inside the svg element.
+- The `circle` element is used to make the face and the eyes. One large circle forms the yellow face, and two smaller circles make the eyes.
+- The `path` element is used to draw the smile. It creates a curved line for the mouth.
+
+Each SVG element has attributes that control its appearance and position within the drawing area
+SVGs are best for icons & logos, illustrations & line arts, scalable UI graphics, animations, charts & graphs, and more. But, raster formats are better for photographs, complex (high-detail) images, and real-life scenes.
