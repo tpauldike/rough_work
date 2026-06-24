@@ -10,6 +10,7 @@ The `link` element is used to link to external resources like *stylesheets* and 
 `<link rel="stylesheet" href="./styles.css" />`
 
 The `rel` attribute defines the relationship between the resource that’s being linked and the HTML document (such as; *stylesheet, preconnect, icon*), while the `href` attribute specifies the location of the linked file or resource.
+
 **HTML boiler plate** is simply the ready–made template that defines the basic structure of the document, and this is what it looks like:
 ```html
 <!DOCTYPE html>
@@ -36,7 +37,7 @@ Commenting allows you to leave messages without affecting the browser display. I
 
 The entire contents of the page are nested within an `html` element. The `html` element is the root element of an HTML page and wraps all content on the page. The `head` element is used to contain metadata about the document, such as its `title`, links to stylesheets, and scripts.
 Metadata is information about the page that isn't displayed directly on the page; all page content elements that should be rendered to the page go inside the `body` element. The  `main`  element is used to represent the main content of the body of an HTML document. Content inside the  `main`  element should be unique to the document and should not be repeated in other parts of the document.
-The `section` element is used to define sections in a document, such as *chapters, headers, footers*, or any other sections of the document. It is a semantic element that helps with SEO and accessibility. The anchor tag is used to turn a text or other elements to a clinkable link, the `href` attribute specifies the link while the target attribute determines where the link opens.
+The `section` element is used to define sections in a document, such as *chapters, headers, footers*, or any other sections of the document. It is a semantic element that helps with SEO and accessibility. The anchor tag is used to turn a text or other elements to a clickable link, the `href` attribute specifies the link while the `target` attribute determines where the link opens.
 The `figure` element represents self-contained content and will allow you to associate an *image* with a *caption*. You use it by nesting the `img` element in it alongside the `figcaption` element that contains the title of the image. `em` is used to place emphasis on a specific word or group of words; The `strong` element is used to indicate that some text is of strong importance or urgent.
 `<ul>` is used for making unordered lists while `<ol>` is used to create ordered lists; the former displays with bulletins while the later displays numbered lists in order, and `<li>` elements are nested in them to add each member of the list.
 The `footer`  element is used to define a footer for a document or section. A footer typically contains information about the author of the document, copyright data, links to terms of use, contact information, and more.
@@ -52,7 +53,10 @@ In other words, HTML entities are special codes used to display characters that:
 - Cannot be typed directly from the keyboard (e.g., © ® € →)
 - Could break your markup or cause ambiguity
 
-They ensure your content renders safely and correctly across browsers. There are 3 types of HTML entities or character reference; named entities (which begins with an ampersand and ends with a semi-colon, with some letters or a word in between. E.g; `&copy;`), decimal entities (which starts with an ampersand ‘&’, followed by pound ‘#’, and the digits that refer to the particular character of interest. E.g; `&#169;`), and hexadecimal entities (composed of the ampersand, the pound symbol, the letter x, and the ASCII code of the character of interest. E.g; `&#x00A9;`).
+They ensure your content renders safely and correctly across browsers. There are 3 types of HTML entities or character reference:
+1. Named entities (which begins with an ampersand and ends with a semi-colon, with some letters or a word in between. E.g; `&copy;`)
+2. Decimal entities (which starts with an ampersand ‘&’, followed by pound ‘#’, and the digits that refer to the particular character of interest. E.g; `&#169;`)
+3. Hexadecimal entities (composed of the ampersand, the pound symbol, the letter x, and the ASCII code of the character of interest. E.g; `&#x00A9;`).
 
 **The most important entities every developer should know are:**
 
@@ -114,19 +118,19 @@ It is recommended that the image is of high quality, 1200 x 630 pixels.
 ## HTML Audio and Video Elements
 ###### Here is [my practical work](https://github.com/tpauldike/rough_work/blob/main/fullstack_course/1-html/video-and-audio.html) with HTML video and audio elements
 
-The `audio` element supports popular audio formats like mp3, wav, and ogg. The `video` element supports mp4, ogg, and webm formats. The audio has an src attribute that has the url of the audio file, but it will not be accessible by the user (nothing will be displayed on the screen) until you add the *controls* attribute, which enables the user to control (play, pause, mute, forward, rewind, increase the playback speed, and increase the volume of) the audio. The `audio` element also has other attributes such as; *autoplay (very useful for background music), loop (to play the song repeatedly to infinity), muted (to start the song muted for the user to unmute), preload  (auto, to preload the whole thing; metadata, to preload the only duration and size; none, to preload nothing), cross origin* and more.
+The `audio` element supports popular audio formats like mp3, wav, and ogg. The `video` element supports mp4, ogg, and webm formats. The audio has an src attribute that has the url of the audio file, but it will not be accessible by the user (nothing will be displayed on the screen) until you add the *controls* attribute, which enables the user to control (play, pause, mute, forward, rewind, increase the playback speed, and increase the volume of) the audio. The `audio` element also has other attributes such as; *autoplay (very useful for background music), loop (to play the song repeatedly to infinity), muted (to start the song muted for the user to unmute), preload  (auto, to preload the whole thing; metadata, to preload only the duration and size; none, to preload nothing), cross origin* and more.
 
 When it comes to audio file types, there are differences in which browsers support which type. To accommodate this, you can use source elements inside the audio element and the browser will select the first source that it understands. Here's an example of using multiple source elements for an audio element:
 
 ```html
 <audio controls>							
-  <source src="audio.ogg" type="audio/ogg" />		
-  <source src="audio.wav" type="audio/wav" />  	
-  <source src="audio.mp3" type="audio/mpeg" />	
+  <source src="the_title.ogg" type="audio/ogg" />		
+  <source src="the_title.wav" type="audio/wav" />  	
+  <source src="the_title.mp3" type="audio/mpeg" />	
   Your browser does not support the audio element.	
 </audio>
 ```								
-The browser will first start with the ogg type, and if it can't play the audio, then it'll move down to the next type in the list.
+The browser will first start with the ogg type, and if it can't play the audio, then it'll move down to the next type in the list; if it cannot play all the given types then it will display the message written on the last line.
 The video element shares the same attributes mentioned so far but has more, such as; playsinline, width, height, poster (to display an image while the video is preloading or before it plays). Below is an example:
 
 ```html
@@ -141,7 +145,7 @@ src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_s
 ```
 
 ## Common Ways to Optimize Media Assets
-Size, format and compression are the 3 things to consider while using media such as images. The image shouldn’t be too large or too small; it’s unnecessary to use an image of size 1920x1080 when you want it rendered at 640x680.
+*Size*, *format* and *compression* are the 3 things to consider while using media such as images. The image shouldn’t be too large or too small; it’s unnecessary to use an image of size 1920x1080 when you want it rendered at 640x680.
 There are more optimized image formats than PNG and JPG. A compression algorithm can be run to have the image (not on JPGs, to avoid reduced quality) locally compressed for optimization, so that the user doesn’t download unnecessary data while browsing your web page.
 
 Images are considered as intellectual property and are therefore copyrighted, using them requires either obtaining written permission from the copyright holder, purchasing a license from the copyright holder, or incorporating the image in a way that falls under fair use (which is a bit dicey).
